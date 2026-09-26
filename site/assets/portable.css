@@ -21,6 +21,6 @@
 .sqs-video-wrapper:focus-visible { outline:3px solid #4bb0e3; outline-offset:4px; }
 dialog.video-modal { padding:0; border:0; background:#000; width:min(90vw,1400px); max-width:none; overflow:visible; }
 dialog.video-modal::backdrop { background:rgba(0,0,0,.94); }
-dialog.video-modal iframe { display:block; width:100%; aspect-ratio:16/9; border:0; }
+dialog.video-modal iframe { display:block; width:100%; height:auto; aspect-ratio:16/9; border:0; }
 .video-close { position:absolute; top:-42px; right:0; color:#fff; background:none; border:0; font:32px sans-serif; cursor:pointer; }
 @media(prefers-reduced-motion:reduce) { .sqs-video-background iframe { display:none; } }

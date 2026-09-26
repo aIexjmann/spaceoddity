@@ -69,8 +69,9 @@ document.querySelectorAll('.sqs-video-wrapper[data-html]').forEach((wrapper,inde
     const close = document.createElement('button');
     close.className = 'video-close'; close.textContent = '×'; close.setAttribute('aria-label','Close video');
     close.addEventListener('click',closeVideo);
-    const frame = source.cloneNode(true);
-    let url = new URL(frame.getAttribute('src'),'https://www.spaceoddity.xyz');
+    const frame = document.createElement('iframe');
+    frame.allowFullscreen=true;
+    let url = new URL(source.getAttribute('src'),'https://www.spaceoddity.xyz');
     if(url.hostname==='cdn.embedly.com' && url.searchParams.get('src')) url=new URL(url.searchParams.get('src'));
     url.protocol='https:';
     url.searchParams.set('autoplay','1');
