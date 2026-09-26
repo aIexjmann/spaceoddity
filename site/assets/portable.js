@@ -22,6 +22,7 @@ document.querySelectorAll('.sqs-video-background').forEach(background => {
   const id = url.searchParams.get('v');
   if (!id || matchMedia('(prefers-reduced-motion: reduce)').matches) return;
   const frame = document.createElement('iframe');
+  frame.className = 'background-video ready';
   frame.src = `https://www.youtube.com/embed/${encodeURIComponent(id)}?autoplay=1&mute=1&loop=1&playlist=${encodeURIComponent(id)}&controls=0&playsinline=1&rel=0`;
   frame.title = 'Space Oddity background reel';
   frame.allow = 'autoplay; encrypted-media';
