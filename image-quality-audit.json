@@ -1,0 +1,16 @@
+{
+  "checked": 106,
+  "differences": [
+    {
+      "file": "6d6f5eda33f5-LucidPix---Product-Video-Thumbnail--2.jpg",
+      "expected": [
+        3840,
+        2160
+      ],
+      "downloaded": [
+        2500,
+        1406
+      ]
+    }
+  ]
+}
