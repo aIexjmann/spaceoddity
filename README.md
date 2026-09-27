@@ -17,7 +17,7 @@ There is no application server or build dependency. GitHub Pages can serve the `
 
 ## Fidelity and remaining dependencies
 
-The original responsive grid, content, custom CSS, imagery, section spacing and 0.5-factor parallax are preserved. The Squarespace platform runtime and tracking scripts are replaced with local code. Video backgrounds use the original YouTube reels; portfolio players retain YouTube, Facebook, and TikTok sources. The video modal supports keyboard activation, Escape and a close control. Playback remains subject to those providers' availability and embedding permissions.
+The original responsive grid, content, custom CSS, imagery, section spacing and 0.5-factor parallax are preserved. The Squarespace platform runtime and tracking scripts are replaced with local code. Video backgrounds use local 1080p MP4 copies of the original reels, muted and looping without player controls; portfolio players retain YouTube, Facebook, and TikTok sources. The video modal supports keyboard activation, Escape and a close control. Playback remains subject to those providers' availability and embedding permissions.
 
 Futura PT loads from the same Adobe font resources used by the live website. An independent Adobe Fonts project or licensed webfont files should replace those URLs before Squarespace retirement; the old Squarespace kit itself is not used.
 
