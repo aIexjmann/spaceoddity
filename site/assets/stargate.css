@@ -1,0 +1,6 @@
+/* Homepage-only experiment. Remove the two stargate includes to revert. */
+.stargate-halo{position:absolute;inset:0;z-index:0;pointer-events:none;opacity:0;transition:opacity .7s ease;mix-blend-mode:difference;background:radial-gradient(circle 155px at var(--halo-x,50%) var(--halo-y,50%),rgba(215,230,255,.3),rgba(245,230,255,.19) 36%,rgba(255,255,255,.06) 62%,transparent 100%)}
+.stargate-halo::after{content:"";position:absolute;inset:0;background:radial-gradient(ellipse 200px 155px at var(--halo-x,50%) var(--halo-y,50%),transparent 35%,rgba(73,125,255,.15) 52%,rgba(150,70,220,.12) 65%,rgba(240,82,92,.09) 75%,transparent 100%)}
+.stargate-halo.is-active{opacity:1}
+.stargate-logo{translate:var(--logo-x,0px) var(--logo-y,0px);transition:translate .25s ease-out}
+@media(max-width:767px),(hover:none),(pointer:coarse),(prefers-reduced-motion:reduce){.stargate-halo{display:none}.stargate-logo{translate:none!important}}
