@@ -21,14 +21,20 @@ document.querySelectorAll('.sqs-video-background').forEach(background => {
   const url = new URL(background.dataset.configUrl);
   const id = url.searchParams.get('v');
   if (!id || matchMedia('(prefers-reduced-motion: reduce)').matches) return;
-  const frame = document.createElement('iframe');
-  frame.className = 'background-video ready';
-  frame.src = `https://www.youtube.com/embed/${encodeURIComponent(id)}?autoplay=1&mute=1&loop=1&playlist=${encodeURIComponent(id)}&controls=0&playsinline=1&rel=0`;
-  frame.title = 'Space Oddity background reel';
-  frame.allow = 'autoplay; encrypted-media';
-  frame.tabIndex = -1;
-  frame.setAttribute('aria-hidden','true');
-  background.append(frame);
+  const names = {JpV9kuYqryE:'agency', 'K4L4ff-BfpY':'films'};
+  if (!names[id]) return;
+  const video = document.createElement('video');
+  video.src = new URL('../assets/' + names[id] + '-reel.mp4', location.href).href;
+  video.autoplay = true; video.loop = true; video.muted = true;
+  video.defaultMuted = true; video.playsInline = true; video.controls = false;
+  video.preload = 'auto'; video.disablePictureInPicture = true;
+  video.setAttribute('muted',''); video.setAttribute('playsinline','');
+  video.setAttribute('aria-hidden','true'); video.tabIndex = -1;
+  video.style.cssText = 'position:absolute;inset:0;width:100%;height:100%;object-fit:cover;pointer-events:none;opacity:0;transition:opacity .4s';
+  video.addEventListener('playing',()=>{video.style.opacity='1';});
+  background.append(video);
+  video.play().catch(()=>{});
+
 });
 // The original Brine template uses a 0.5 scroll factor and averages section
 // and viewport height for its background canvas.
