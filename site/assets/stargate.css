@@ -1,5 +1,5 @@
 /* Homepage-only light flight. Original logo and navigation remain stationary. */
-.stargate-flight{position:absolute;inset:0;width:100%;height:100%;z-index:0;pointer-events:none}
+.stargate-flight{position:absolute;inset:0;width:100%;height:100%;z-index:0;pointer-events:none;mix-blend-mode:screen;opacity:.55}
 [data-static-page="home"] #menu .Index-page-content{z-index:2}
 [data-static-page="home"] #menu h5 a{text-shadow:0 2px 15px #000,0 0 25px #000}
 .stargate-pause{position:absolute;bottom:16px;right:20px;z-index:3;border:1px solid #ffffff35;border-radius:20px;background:#080513a6;color:#ffffffb3;padding:7px 12px;font:11px/1.2 system-ui,sans-serif;letter-spacing:.06em;cursor:pointer}
