@@ -5,8 +5,6 @@
  const canvas=document.createElement('canvas');
  canvas.className='stargate-flight';canvas.setAttribute('aria-hidden','true');hero.append(canvas);
  const ctx=canvas.getContext('2d');if(!ctx){canvas.remove();return;}
- const pause=document.createElement('button');pause.className='stargate-pause';
- pause.type='button';pause.textContent='Pause motion';pause.setAttribute('aria-pressed','false');hero.append(pause);
  const reduced=matchMedia('(prefers-reduced-motion: reduce)');
  let w=0,h=0,frame=0,last=0,time=0,paused=reduced.matches,visible=true;
  // Deterministic lanes create a coherent corridor, rather than random flashes.
@@ -58,10 +56,8 @@
  }
  function sync(){
   cancelAnimationFrame(frame);frame=0;last=0;
-  pause.textContent=paused?'Play motion':'Pause motion';pause.setAttribute('aria-pressed',String(paused));
   if(!paused&&!document.hidden&&visible)frame=requestAnimationFrame(tick);
  }
- pause.addEventListener('click',()=>{paused=!paused;sync();});
  reduced.addEventListener('change',()=>{paused=reduced.matches;sync();});
  document.addEventListener('visibilitychange',sync);
  new IntersectionObserver(([entry])=>{visible=entry.isIntersecting;sync();}).observe(hero);

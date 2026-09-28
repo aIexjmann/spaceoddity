@@ -4,8 +4,9 @@
 @font-face{font-family:futura-pt;src:url("https://use.typekit.net/af/5c9bb8/00000000000000007735d694/31/l?subset_id=2&fvd=n6&v=3") format("woff2");font-weight:600;font-style:normal;font-display:swap;}
 @font-face{font-family:futura-pt;src:url("https://use.typekit.net/af/361f51/000000000000000077586b60/31/l?subset_id=2&fvd=n7&v=3") format("woff2");font-weight:700;font-style:normal;font-display:swap;}
 /* Preserve the exported template styles; replace only runtime layout hooks. */
+html[data-static-page="home"],html[data-static-page="home"] body{background:#03020d}
 .Index-page { position: relative; isolation: isolate; overflow: hidden; }
-.Index-page:first-child { min-height: 100vh; display: flex; align-items: center; }
+.Index-page:first-child { min-height: 100vh; min-height: 100dvh; display: flex; align-items: center; }
 .Index-page-content { position: relative; z-index: 2; width: 100%; box-sizing: border-box; }
 .Index-page-image { position: absolute !important; top:0; left:0; bottom:auto; height:100%; width:100%; margin: 0; z-index: -1; will-change:transform; }
 .Index-page-image img, .sqs-video-background > img { width:100%; height:100%; object-fit:cover; }
