@@ -7,6 +7,8 @@
 html[data-static-page="home"],html[data-static-page="home"] body{background:#03020d}
 /* With viewport-fit=cover, keep overlay header clear of the notch. */
 .Header--overlay{padding-top:env(safe-area-inset-top,0px)}
+/* Homepage hero is full-bleed with its own links; drop the fixed mobile top bar there. */
+html[data-static-page="home"] .Mobile-bar--top{display:none}
 .Index-page { position: relative; isolation: isolate; overflow: hidden; }
 .Index-page:first-child { min-height: 100vh; min-height: 100dvh; display: flex; align-items: center; }
 .Index-page-content { position: relative; z-index: 2; width: 100%; box-sizing: border-box; }
